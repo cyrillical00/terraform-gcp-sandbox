@@ -25,7 +25,7 @@ A learning sandbox for provisioning GCP infrastructure with Terraform. Deploys a
    cp terraform.tfvars.example terraform.tfvars
    ```
 
-3. Edit `terraform.tfvars` with your GCP project ID and preferred region.
+3. Edit `terraform.tfvars` with your GCP project ID, preferred region, and `ssh_source_ranges` (your own IP as a /32, or `35.235.240.0/20` for IAP). There is no default; `0.0.0.0/0` is rejected. The VM enforces OS Login, so SSH with `gcloud compute ssh`.
 
 ## Usage
 
